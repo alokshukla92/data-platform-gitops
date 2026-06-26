@@ -1,0 +1,5 @@
+# Staging overrides. Promote a build by setting the SHA-pinned tag that passed dev.
+global:
+  imageTag: sha-REPLACE_WITH_PROMOTED_SHA
+secrets:
+  create: false   # secrets injected by External Secrets Operator

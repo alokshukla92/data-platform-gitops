@@ -1,0 +1,4 @@
+# Local overrides (used when running ArgoCD against a kind cluster).
+global:
+  imageTag: dev
+  imageRegistry: data-platform

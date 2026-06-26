@@ -1,0 +1,5 @@
+# Production overrides. Only SHA-pinned, staging-validated tags should land here.
+global:
+  imageTag: stable
+secrets:
+  create: false   # secrets injected by External Secrets Operator / Vault

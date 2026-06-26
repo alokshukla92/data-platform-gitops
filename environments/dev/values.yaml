@@ -1,0 +1,7 @@
+# Dev environment overrides (managed by GitOps). Bump imageTag here to deploy a new build.
+global:
+  imageTag: latest
+secrets:
+  data:
+    POSTGRES_HOST: postgres.data-platform-dev.svc
+    JWT_SECRET_KEY: dev-secret-rotate-me

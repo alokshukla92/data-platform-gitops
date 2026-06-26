@@ -1,0 +1,25 @@
+# App-of-Apps: a single ArgoCD Application that manages all child Applications defined
+# under apps/ in this repo. Apply once; everything else is reconciled from git.
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: data-platform-root
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    # TODO: replace with your fork of the gitops repo.
+    repoURL: https://github.com/YOUR_ORG/data-platform-gitops.git
+    targetRevision: main
+    path: apps
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
