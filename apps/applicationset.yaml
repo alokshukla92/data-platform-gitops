@@ -28,7 +28,7 @@ spec:
       project: default
       sources:
         # Helm chart + base per-env values come from the application repo.
-        - repoURL: https://github.com/YOUR_ORG/data-platform.git
+        - repoURL: https://github.com/alokshukla92/data-platform.git
           targetRevision: main
           path: deploy/helm/data-platform
           helm:
@@ -36,7 +36,7 @@ spec:
               - 'values-{{.env}}.yaml'
               - '$values/environments/{{.env}}/values.yaml'
         # Image tags / promotion overrides come from this gitops repo.
-        - repoURL: https://github.com/YOUR_ORG/data-platform-gitops.git
+        - repoURL: https://github.com/alokshukla92/data-platform-gitops.git
           targetRevision: main
           ref: values
       destination:

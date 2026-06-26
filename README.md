@@ -45,7 +45,7 @@ environments/
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-# 2. Point ArgoCD at this repo (edit repoURLs first to your forks)
+# 2. Point ArgoCD at this repo (repoURLs are preset to github.com/alokshukla92/*)
 kubectl apply -f bootstrap/root-app.yaml
 ```
 

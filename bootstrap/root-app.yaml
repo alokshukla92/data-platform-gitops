@@ -10,8 +10,7 @@ metadata:
 spec:
   project: default
   source:
-    # TODO: replace with your fork of the gitops repo.
-    repoURL: https://github.com/YOUR_ORG/data-platform-gitops.git
+    repoURL: https://github.com/alokshukla92/data-platform-gitops.git
     targetRevision: main
     path: apps
   destination:
